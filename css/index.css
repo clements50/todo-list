@@ -7,7 +7,7 @@
  }
 
 .container {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: 300px 3fr;
@@ -85,6 +85,25 @@ nav {
 background: none;
 border: none;
 font-size: 3rem;
+}
+
+.projects-list {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   list-style: none;
+   overflow-y: scroll;
+   scrollbar-color:  #bbe1fa #3282b8;
+   height: 70%;
+}
+
+.projects-list li {
+   font-size: 1.3rem
+}
+
+.fa-trash-can {
+   margin-left: 2rem;
+  cursor: pointer; 
 }
 
 .active {
