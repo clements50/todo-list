@@ -1,4 +1,5 @@
 import projectFactory from './projects';
+import projectRender from './project-render';
 
 const initProjects = (projects)=> {
 
@@ -10,7 +11,8 @@ const initProjects = (projects)=> {
       e.preventDefault();
       const project = projectFactory(projectInput.value);
       projects.push(project);
-      console.log(projects);
+      projectInput.value = '';
+      projectRender(projects);
    })
 };
 
