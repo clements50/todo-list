@@ -64,20 +64,21 @@ nav {
 }
 
 
-.add-project-form {
+.project-form {
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 1rem;
 }
 
-.project-form {
+.project-input {
   border: none;
   border-bottom: 3px solid #bbe1fa;
   background: none;
   outline: none;
   font-size: 1.5rem;
-  width: 80%
+  width: 80%;
+  color: #bbe1fa;
 } 
 
 .project-btn {
