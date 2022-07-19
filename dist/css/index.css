@@ -76,12 +76,14 @@ nav {
   border-bottom: 3px solid #bbe1fa;
   background: none;
   outline: none;
+  font-size: 1.5rem;
+  width: 80%
 } 
 
 .project-btn {
 background: none;
 border: none;
-font-size: 2rem;
+font-size: 3rem;
 }
 
 .active {
