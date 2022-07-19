@@ -42,15 +42,33 @@ nav {
 .projects {
   position: fixed;
   left: -100%; 
-  top: 70px;
   width: 100%;
   height: 100%;
   transition: ease-in-out 0.3s;
   display: flex;
-  justify-content: center;
-  padding: 2rem; 
+  flex-direction: column; 
   background: #3282b8;
   z-index: 1;
+}
+
+.projects-header {
+   padding: 1rem;
+   background: #0f4c75;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.exit-btn {
+   font-size: 2rem;
+}
+
+
+.add-project-form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1rem;
 }
 
 .project-form {
@@ -94,7 +112,14 @@ main {
   align-items: center;
   font-size: 2rem;
   position: fixed;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
+
+.add-task-active {
+   transform: rotate(45deg);
+}
+
 
 @media screen and (min-width: 870px){
 
@@ -104,6 +129,17 @@ main {
 
   .projects {
     position: static;
+  }
+
+  .projects-header {
+     background: #3282b8;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .exit-btn {
+     display: none;
   }
 
   main {
