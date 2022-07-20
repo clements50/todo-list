@@ -1,10 +1,8 @@
 import domStuff from './modules/dom';
-import initProjects from './modules/init-projects';
-import projectRender from './modules/project-render';
+import onProjectSubmit from './modules/project-submit';
 
 const projects = [];
 
 
 domStuff
-initProjects(projects);
-projectRender(projects);
+onProjectSubmit(projects);

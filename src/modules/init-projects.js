@@ -1,17 +1,11 @@
 import projectFactory from './projects-factory';
 
-const initProjects = (projects)=> {
+const initProjects = (projects, projectInputValue)=> {
 
-   const projectsList = document.querySelector('.projects-list');
-   const projectForm = document.querySelector('.project-form');
-   const projectInput = document.querySelector('.project-input');
+   const project = projectFactory(projectInputValue);
+   projects.push(project);
+   projectInputValue = '';
 
-   projectForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const project = projectFactory(projectInput.value);
-      projects.push(project);
-      projectInput.value = '';
-   })
 };
 
 export default initProjects;
