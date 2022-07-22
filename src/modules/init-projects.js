@@ -1,11 +1,9 @@
 import projectFactory from './projects-factory';
 
-const initProjects = (projects, projectInputValue)=> {
-
-   const project = projectFactory(projectInputValue);
+const initProjects = (projects, inputValue)=> {
+  const projectFormInput = document.querySelector('.project-form')
+   const project = projectFactory(inputValue);
    projects.push(project);
-   projectInputValue = '';
-
 };
 
 export default initProjects;

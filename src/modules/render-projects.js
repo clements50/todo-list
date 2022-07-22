@@ -1,8 +1,6 @@
 import clearElement from './clear-element';
-import setActiveProject from './active-project';
 
-const renderProjects = (projects) => {
-   
+const renderProjects = (projects, selectedProject) => {
    const projectsListElement = document.querySelector('.projects-list');
 
    clearElement(projectsListElement);
@@ -12,8 +10,12 @@ const renderProjects = (projects) => {
       projectElement.classList.add('project-element');
       projectElement.dataset.index = i;
       projectElement.innerHTML = `${project.name} <i class='fa-solid fa-trash-can'></i>`;
+
+     if(projectElement.dataset.index === selectedProject){
+       projectElement.style.color = 'white';
+     }
+
       projectsListElement.appendChild(projectElement);
-      projectElement.addEventListener('click', setActiveProject);
    });
 
 };

@@ -1,8 +1,9 @@
 import domStuff from './modules/dom';
-import onProjectSubmit from './modules/project-submit';
-
-const projects = [];
-
+import projectsJs from './modules/projects.js'
 
 domStuff
-onProjectSubmit(projects);
+
+projectsJs();
+
+
+
