@@ -39,6 +39,28 @@
           <h2 class='task-name'>joes crap shack</h2>
           <div class="description">Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod.</div>
         </div>
+        <div class='modal modal-hide'>
+          <form class='modal-form'>
+            <div class='form-header-container'>
+              <h1 class="modal-form-header">New Todo</h1>
+              <span class="modal-exit-btn">x</span>
+            </div>
+            <div class='name-date-inputs-container'>
+              <div class='name-input-container'>
+                <label for="name-field">Todo Name</label>
+                <input type='text' id='name-field' placeholder="Todo Name" name="todo_name">
+              </div>
+              <div class='date-input-container'>
+                <label for="date-field">Due Date</label>
+                <input type='date' id="date-field" placeholder="mm/dd/yyyy">
+              </div>
+            </div>
+            <div class='todo-description-container'>
+              <label for='todo-description'>Description</label>
+              <textarea id="todo-description" rows="5" cols="10"></textarea>            </div>
+            <button type="submit" class="create-task-btn">Add Todo</button>
+          </form>
+        </div>
       </main>
       <footer>
         
