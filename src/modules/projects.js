@@ -1,4 +1,3 @@
-import projectFactory from './projects-factory';
 import initProjects from './init-projects';
 import renderProjects from './render-projects';
 
@@ -8,7 +7,7 @@ const projectsJs = function () {
   const projectFormInput = document.querySelector('.project-input');
   const projectList = document.querySelector('.projects-list');
 
-  const projects = [];
+  let projects = [];
   let selectedProject;
 
   projectForm.addEventListener('submit', (e) => {

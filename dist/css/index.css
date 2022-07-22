@@ -139,12 +139,12 @@ main {
   align-items: center;
   font-size: 2rem;
   position: fixed;
-  transition: all 0.2s ease-in-out;
+  transition: all 1s ease-in-out;
   cursor: pointer;
 }
 
 .add-task-active {
-   transform: rotate(45deg);
+   transform: translate(-37vw) rotate(135deg);
 }
 
 .task {
