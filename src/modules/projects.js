@@ -15,7 +15,7 @@ const projectsJs = function () {
     e.preventDefault();
     const inputValue = projectFormInput.value;
     initProjects(projects, inputValue);
-    renderProjects(projects);
+    renderProjects(projects, selectedProject);
     projectFormInput.value = null;
   });
 
