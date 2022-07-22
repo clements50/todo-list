@@ -225,11 +225,17 @@ main {
 .name-date-inputs-container {
    display: flex;
    justify-content: center;
+   width: 100%;
    gap: 10px;
 }
 
 #date-field {
   color: #0f4c75;
+  width: 85%;
+}
+
+#name-field {
+  width: 100%;
 }
 
 .todo-description-container {
