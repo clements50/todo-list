@@ -1,7 +1,7 @@
 import initProjects from './init-projects';
 import renderProjects from './render-projects';
-import TodoFactory from './todos-factory';
 import initTodos from './init-todos';
+import renderTodos from './render-todos';
 
 
 const projectsJs = function () {
@@ -13,9 +13,11 @@ const projectsJs = function () {
   const modalNameField = document.querySelector('#name-field');
   const modalDateField = document.querySelector('#date-field');
   const modalDescription = document.querySelector('#todo-description');
+  const addTaskBtn = document.querySelector('.add-task');
+  const modal = document.querySelector('.modal');
 
   let projects = [{name: 'All Todos', list: []}];
-  let selectedProject;
+  let selectedProject = 0;
 
   projectForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ const projectsJs = function () {
     if(e.target.tagName.toLowerCase() === 'li'){
       selectedProject = parseInt(e.target.dataset.index);
       renderProjects(projects, selectedProject);
+      renderTodos(projects, selectedProject);
     };
   });
 
@@ -38,11 +41,20 @@ const projectsJs = function () {
     const modalDateValue = modalDateField.value;
     const modalDescValue = modalDescription.value;
     initTodos(projects, selectedProject, modalNameValue, modalDateValue, modalDescValue);
+    modalNameField.value = null;
+    modalDateField.value = null;
+    modalDescription.value = null;
+    modal.classList.remove('modal-show');
+    modal.classList.add('modal-hide');
+    addTaskBtn.classList.remove('add-task-active');
+
+    renderTodos(projects, selectedProject);
     console.log(projects)
   });
 
 
   renderProjects(projects, selectedProject);
+  renderTodos(projects, selectedProject);
 
 };
 
