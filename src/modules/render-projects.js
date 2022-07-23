@@ -11,7 +11,7 @@ const renderProjects = (projects, selectedProject) => {
       projectElement.dataset.index = i;
       projectElement.innerHTML = `${project.name} <i class='fa-solid fa-trash-can'></i>`;
 
-     if(projectElement.dataset.index === selectedProject){
+     if(projectElement.dataset.index == selectedProject){
        projectElement.style.color = 'white';
      }
 
