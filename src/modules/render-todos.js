@@ -1,18 +1,11 @@
 import clearElement from "./clear-element";
 
 const renderTodos = function(projects, selectedProject) {
-
-  const todoSection = document.querySelector('.todo-section');
-  const taskHeader = document.createElement('div');
-  taskHeader.classList.add('task-header')
-  const projectNameHeader = document.createElement('h1');
-  projectNameHeader.classList.add('project-name-header');
+  const taskContainer = document.querySelector('.task-container');
+  const projectNameHeader = document.querySelector('.project-name-header')
   projectNameHeader.textContent = projects[selectedProject].name;
-  taskHeader.appendChild(projectNameHeader);
 
-  clearElement(todoSection);
-  
-  todoSection.appendChild(taskHeader);
+  clearElement(taskContainer);
 
   projects[selectedProject].list.forEach(todo => {
     const taskElement = document.createElement('div');
@@ -25,7 +18,7 @@ const renderTodos = function(projects, selectedProject) {
     taskDescription.textContent = todo.description; 
     taskElement.appendChild(taskName);
     taskElement.appendChild(taskDescription);
-    todoSection.appendChild(taskElement);
+    taskContainer.appendChild(taskElement);
   })
 };
 
