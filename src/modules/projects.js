@@ -2,6 +2,7 @@ import initProjects from './init-projects';
 import renderProjects from './render-projects';
 import initTodos from './init-todos';
 import renderTodos from './render-todos';
+import completeTask from './complete-task';
 
 
 const projectsJs = function () {
@@ -53,6 +54,7 @@ const projectsJs = function () {
   });
 
 
+  completeTask(projects, selectedProject);
   renderProjects(projects, selectedProject);
   renderTodos(projects, selectedProject);
 

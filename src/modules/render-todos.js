@@ -7,17 +7,18 @@ const renderTodos = function(projects, selectedProject) {
 
   clearElement(taskContainer);
 
-  projects[selectedProject].list.forEach(todo => {
+  projects[selectedProject].list.forEach((todo, i) => {
     const taskElement = document.createElement('div');
     taskElement.classList.add('task');
-    const taskName = document.createElement('h2');
+    taskElement.dataset.index = i;
+    const todoCheckbox = document.createElement('input');
+    todoCheckbox.type = 'checkbox';
+    todoCheckbox.classList.add('todo-checkbox');
+    const taskName = document.createElement('p');
     taskName.classList.add('task-name');
     taskName.textContent = todo.name;
-    const taskDescription = document.createElement('div');
-    taskDescription.classList.add('description');
-    taskDescription.textContent = todo.description; 
+    taskElement.appendChild(todoCheckbox);
     taskElement.appendChild(taskName);
-    taskElement.appendChild(taskDescription);
     taskContainer.appendChild(taskElement);
   })
 };

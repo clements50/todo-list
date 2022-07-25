@@ -6,6 +6,7 @@ const addTaskBtn = document.querySelector('.add-task');
 const projectExit = document.querySelector('.exit-btn');
 const modal = document.querySelector('.modal');
 const modalExitBtn = document.querySelector('.modal-exit-btn');
+const taskContainer = document.querySelector('.task-container');
 
 hamburger.addEventListener('click', () => {
   projectSection.classList.add('active')
@@ -37,6 +38,18 @@ addTaskBtn.addEventListener('click', () => {
 projectExit.addEventListener('click', () => {
   projectSection.classList.remove('active');
 });
+
+taskContainer.addEventListener('click', (e) => {
+  if(e.target.className === 'todo-checkbox'){
+    if(e.target.checked === true){
+      e.target.parentElement.classList.add('task-completed');
+    }else {
+      e.target.parentElement.classList.remove('task-completed')
+    }
+  }
+})
+
+
 
 })();
 

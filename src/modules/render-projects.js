@@ -9,7 +9,7 @@ const renderProjects = (projects, selectedProject) => {
       const projectElement = document.createElement('li');
       projectElement.classList.add('project-element');
       projectElement.dataset.index = i;
-      projectElement.innerHTML = `${project.name} <i class='fa-solid fa-trash-can'></i>`;
+      projectElement.textContent = project.name ;
 
      if(projectElement.dataset.index == selectedProject){
        projectElement.style.color = 'white';
